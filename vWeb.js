@@ -54,10 +54,11 @@ noBtn.onclick = function(){
 
 const yesBtn = document.getElementById("yesBtn"); 
 let p1 = document.getElementById("p1"); 
-
+let typingInterval; 
 yesBtn.onclick = function(){
     const div1 = document.getElementById("div1");
-    div1.style.backgroundImage = 'url("valentines_images/kiss.gif")';
+    div1.style.backgroundImage = 'url("ValentinesWeb/valentines_images/kiss.gif")'; 
+                                    
     div1.classList.add("show");
     div1.style.backgroundSize = "280px 250px";
     p3.textContent = ""; 
@@ -69,12 +70,12 @@ yesBtn.onclick = function(){
     p4.textContent =""; 
 
     let i = 0; //starting at first lett
-
-     const interval = setInterval(() => {
+    clearInterval(typingInterval); 
+      typingInterval = setInterval(() => {
         p4.textContent += quote.charAt(i); 
         i++; 
         if(i >= quote.length){
-            clearInterval(interval); //to stop when done
+            clearInterval(typingInterval); //to stop when done
         }
      }, 65);  //typing speed 
     //moving to next quote
@@ -109,6 +110,9 @@ yesBtn.onclick = function(){
 setInterval(hearts, 500); 
 
 }
+
+
+
 
 
 
