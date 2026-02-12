@@ -57,7 +57,7 @@ let p1 = document.getElementById("p1");
 let typingInterval; 
 yesBtn.onclick = function(){
     const div1 = document.getElementById("div1");
-    div1.style.backgroundImage = 'url("valentines_images/kiss.gif")'; 
+    div1.style.backgroundImage = 'url("ValentinesWeb/valentines_images/kiss.gif")'; 
                                     
     div1.classList.add("show");
     div1.style.backgroundSize = "280px 250px";
@@ -110,6 +110,7 @@ yesBtn.onclick = function(){
 setInterval(hearts, 500); 
 
 }
+
 
 
 
